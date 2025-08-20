@@ -105,17 +105,59 @@ int main(){
     estado2, codcarta2, cidade2, populacao2, area2, pib2, pontos2,densidade2,pibper2
     ); 
 
-    //comparações 
-
-    printf("\nComparação de Cartas:\n");
-    printf("População: Carta 1 venceu (%lu)\n",populacao1 > populacao2);
-    printf("Área: Carta 1 venceu (%d)\n",area1 > area2);
-    printf("PIB: Carta 1 venceu (%d)\n",pib1 > pib2);
-    printf("Pontos turísticos: Carta 1 venceu (%d)\n", pontos1 > pontos2);
-    printf("Densidade populacional: Carta 1 venceu (%d)\n",densidade1 > densidade2);
-    printf("PIB per capita: Carta 1 venceu\n", pibper1 > pibper2);
-    printf("Super poder: Carta 1 venceu (%d)\n", super1 > super2);
+//comparações 
 
 
+    printf("\nComparação de Cartas\n");
+
+   // População
+if(populacao1 > populacao2)
+    printf("População: Carta 1 (%s) venceu!\n", cidade1);
+else if(populacao2 > populacao1)
+    printf("População: Carta 2 (%s) venceu!\n", cidade2);
+else
+    printf("População: Empate!\n");
+
+// Área
+if(area1 > area2)
+    printf("Área: Carta 1 (%s) venceu!\n", cidade1);
+else if(area2 > area1)
+    printf("Área: Carta 2 (%s) venceu!\n", cidade2);
+else
+    printf("Área: Empate!\n");
+
+// PIB
+if(pib1 > pib2)
+    printf("PIB: Carta 1 (%s) venceu!\n", cidade1);
+else if(pib2 > pib1)
+    printf("PIB: Carta 2 (%s) venceu!\n", cidade2);
+else
+    printf("PIB: Empate!\n");
+
+// Pontos turísticos
+if(pontos1 > pontos2)
+    printf("Pontos turísticos: Carta 1 (%s) venceu!\n", cidade1);
+else if(pontos2 > pontos1)
+    printf("Pontos turísticos: Carta 2 (%s) venceu!\n", cidade2);
+else
+    printf("Pontos turísticos: Empate!\n");
+
+// Densidade populacional (menor vence)
+if(densidade1 < densidade2)
+    printf("Densidade populacional: Carta 1 (%s) venceu!\n", cidade1);
+else if(densidade2 < densidade1)
+    printf("Densidade populacional: Carta 2 (%s) venceu!\n", cidade2);
+else
+    printf("Densidade populacional: Empate!\n");
+
+// PIB per capita
+if(pibper1 > pibper2)
+    printf("PIB per capita: Carta 1 (%s) venceu!\n", cidade1);
+else if(pibper2 > pibper1)
+    printf("PIB per capita: Carta 2 (%s) venceu!\n", cidade2);
+else
+    printf("PIB per capita: Empate!\n");
+
+    
     return 0;
 }
